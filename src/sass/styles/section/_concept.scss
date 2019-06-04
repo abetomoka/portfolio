@@ -1,0 +1,24 @@
+.concept {
+  max-width: 600px;
+  margin: auto;
+  padding: 100px 0;
+
+  &_txt {
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 33px;
+  }
+
+  @media (max-width: 850px) {
+    max-width: 300px;
+
+    &_txt {
+      font-size: 14px;
+      padding-top: 30px;
+    }
+  }
+}
+.marker {
+  background: linear-gradient(transparent 60%, #ffe6e2 0%);
+}

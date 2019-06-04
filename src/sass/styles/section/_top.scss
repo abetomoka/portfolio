@@ -1,0 +1,41 @@
+.top {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  padding: 60px 0;
+
+  &_txt {
+    font-family: 'Permanent Marker';
+    font-size: 18px;
+    position: absolute;
+    bottom: 100px;
+
+    h1 {
+      background: #fff;
+      padding: 20px 30px;
+      margin: 5px 0;
+      display: inline-block;
+    }
+
+    p {
+      background: #fff;
+      padding: 20px 30px;
+      margin: 5px 0;
+    }
+  }
+
+  @media (max-width: 850px) {
+    max-width: 300px;
+
+    img {
+      opacity: 0;
+    }
+
+    &_txt {
+      font-size: 20px;
+      bottom: 50px;
+    }
+  }
+}
+
+

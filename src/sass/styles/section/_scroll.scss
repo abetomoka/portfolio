@@ -1,0 +1,38 @@
+/*------------------------------------------------------------
+
+1.Scroll */
+
+.scroll {
+  &_box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -15px;
+  }
+
+  a {
+    span {
+      width: 24px;
+      height: 24px;
+      display: block;
+      border-left: 1px solid #000;
+      border-bottom: 1px solid #000;
+      transform: rotate(-45deg);
+      animation: sdb 2s infinite;
+    }
+  }
+}
+
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "npmscripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "all": "npm run compile & npm run copy-html & npm run copy-img & npm run copy-js & npm run watch-sass & npm run start",
+    "compile": "npm run copy-html-nowatch & npm run copy-img-nowatch & npm run copy-js-nowatch & npm run compile-sass-nowatch",
+    "compile-sass-nowatch": "node-sass --include-path scss src/sass/styles.scss --output-style compressed dist/styles/styles.css",
+    "compile-sass": "node-sass --include-path scss src/sass/styles.scss --output-style compressed dist/styles/styles.css -w",
+    "watch-sass": "nodemon -e scss -x \"npm run compile-sass\"",
+    "copy-img-nowatch": "cpx \"./src/images/**/*.{svg,png,jpg,gif}\" ./dist/images/",
+    "copy-img": "cpx \"./src/images/**/*.{svg,png,jpg,gif}\" ./dist/images/ -w",
+    "copy-html-nowatch": "cpx \"./src/html/**/*.html\" ./dist/",
+    "copy-html": "cpx \"./src/html/**/*.html\" ./dist/ -w",
+    "copy-js-nowatch": "cpx \"./src/scripts/**/*.*\" ./dist/scripts/",
+    "copy-js": "cpx \"./src/scripts/**/*.*\" ./dist/scripts/ -w",
+    "autoprefixer": "postcss -c postcss.json -o dist/styles/styles.css dist/styles/styles.css",
+    "start": "browser-sync start --server ./dist/ --files='./dist/**/*.html, ./src/**/*'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.2.4",
+    "browser-sync": "^2.23.5",
+    "cpx": "^1.5.0",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.11",
+    "postcss-cli": "^4.1.1",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "scrollreveal": "^3.4.0"
+  }
+}

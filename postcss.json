@@ -1,0 +1,5 @@
+{
+  "use": ["postcss-import", "autoprefixer",  "csswring"],
+  "local-plugins": true,
+  "watch": true
+}

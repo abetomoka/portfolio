@@ -1,0 +1,56 @@
+.photos {
+  padding: 100px 0;
+  text-align: center;
+
+  &_box {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    width: 25%;
+    padding: 10px;
+
+    a {
+      transition: .3s;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      margin: 5px;
+    }
+  }
+
+  &_list:hover &_item a{
+    opacity: .2;
+  }
+
+  &_list &_item a:hover {
+    opacity: 1;
+    transform: scale(1.3);
+    cursor: zoom-in;
+  }
+
+  @media (max-width: 850px) {
+    &_list {
+      padding: 0 5px;
+    }
+
+    &_item {
+      width: 25%;
+
+      img {
+        width: 85px;
+        height: 85px;
+        object-fit: cover;
+      }
+    }
+  }
+}
