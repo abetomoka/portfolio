@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    “postinstall”: “npm run production”,
     "all": "npm run compile & npm run copy-html & npm run copy-img & npm run copy-js & npm run watch-sass & npm run start",
     "compile": "npm run copy-html-nowatch & npm run copy-img-nowatch & npm run copy-js-nowatch & npm run compile-sass-nowatch",
     "compile-sass-nowatch": "node-sass --include-path scss src/sass/styles.scss --output-style compressed dist/styles/styles.css",
