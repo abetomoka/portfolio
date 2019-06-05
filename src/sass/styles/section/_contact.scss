@@ -4,52 +4,43 @@
   &_container {
     display: flex;
     flex-flow: column;
-    align-items: center;
+    width: 500px;
+    margin: auto;
     font-weight: 100;
 
-    h2 {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    input {
-      display: block;
-      width: 500px;
-      height: 50px;
-      border: solid 1px #000;
-      margin-bottom: 10px;
-      color: #a79f9f;
-      font-size: 12px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    textarea {
-      resize: none;
-      width: 500px;
-      height: 230px;
-      border: solid 1px #000;
-      color: #a79f9f;
-      font-size: 12px;
-      padding: 20px;
-    }
-
-    button {
-      margin: auto;
-      display: block;
-      height: 50px;
-      width: 220px;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 100;
+    a {
+      position: relative;
+      display: inline-block;
+      margin: 20px 0;
+      padding: 5px 0 5px 5px;
+      color: #333;
+      text-align: left;
+      font-weight: 400;
       text-decoration: none;
-      background-color: #000;
+      border-bottom: 1px solid #ffe6e2;
       transition: .3s;
 
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        background: #ffe6e2;
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: transform .3s;
+      }
+
       &:hover {
-        background-color: #fff;
-        border: solid 1px #000;
-        color: #000;
+        color: #333;
+
+        &::before {
+          transform-origin: left top;
+          transform: scale(1, 1);
+        }
       }
     }
   }
