@@ -12,9 +12,11 @@
       position: relative;
       display: inline-block;
       margin: 20px 0;
-      padding: 5px 0 5px 5px;
+      padding: 10px 0 10px 5px;
       color: #333;
       text-align: left;
+      font-family: 'Permanent Marker';
+      font-size: 16px;
       font-weight: 400;
       text-decoration: none;
       border-bottom: 1px solid #ffe6e2;
@@ -35,8 +37,6 @@
       }
 
       &:hover {
-        color: #333;
-
         &::before {
           transform-origin: left top;
           transform: scale(1, 1);
@@ -59,17 +59,6 @@
         font-weight: 100;
         margin-bottom: 20px;
         margin-top: 20px;
-      }
-
-      form,
-      input,
-      textarea {
-        width: 100%;
-      }
-
-      button {
-        margin-top: 20px;
-        margin-bottom: 20px;
       }
     }
   }
