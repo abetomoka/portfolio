@@ -1,0 +1,67 @@
+.dog_about {
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    background: rgba(234,188,173, 1);
+  }
+
+  .logo >:first-child {
+    margin-right: auto;
+  }
+
+  .logo_img {
+    display: flex;
+
+    img {
+      height: 70px;
+    }
+
+    .txt {
+      margin: 12px 0 0 18px;
+      color: #110B0A;
+
+      h1 {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 200;
+      }
+
+      p {
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: 200;
+        letter-spacing: 100;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .logo_link {
+    margin-top: 25px;
+
+    a {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 14px;
+      text-transform: none;
+      color: #110B0A;
+      font-weight: 200;
+    }
+  }
+
+  .title {
+    width: 100px;
+    h2 {
+      font-size: 18px;
+      padding-left: 10px;
+    }
+
+    &::before {
+      content: "";
+      height: 2px;
+      width: 10px;
+      background: #000;
+    }
+  }
+}
