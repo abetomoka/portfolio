@@ -62,8 +62,9 @@ body {
   padding-top:10px;
 }
 
-.loading {
+.loader-bg {
   width: 100%;
   margin: auto;
   text-align: center;
+  z-index: 110;
 }
