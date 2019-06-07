@@ -42,6 +42,18 @@ $("document").ready(function(){
   });
 });
 
+$("document").ready(function(){
+  $('.pics_list').slick({
+    autoplay: true,
+    autoplaySpeed: 3500,
+    speed: 900,
+    dots: true,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '10%'
+  });
+});
+
 $(function(){
   var slider = "#slider";
   var thumbnailItem = "#thumbnail-list .thumbnail-item";
