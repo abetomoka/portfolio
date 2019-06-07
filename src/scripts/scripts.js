@@ -1,3 +1,11 @@
+const anim = lottie.loadAnimation({
+  container: document.getElementById('bodymovin-wrapper'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'data.json'
+});
+
 $("document").ready(function(){
   $('.slick-box').slick({
     autoplay: true,
@@ -111,4 +119,7 @@ $(window).load(function () {
   $('#loader').delay(600).fadeOut(300); //$('#loader').fadeOut(300);でも可
   $('#main-contents').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
 });
+
+
+
 
