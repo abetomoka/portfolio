@@ -1,0 +1,172 @@
+.a {
+  display: block;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+.b {
+  display: block;
+  margin: 30px 0;
+  width: 300px;
+  height: 100px;
+  transition: .3s;
+  background: radial-gradient(#fed6e3 0%, #a8edea 100%);
+
+  &:hover {
+    animation: fadeIn 1s alternate-reverse infinite;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      background: radial-gradient(#fed6e3 10%, #a8edea 100%);
+    }
+
+    50% {
+      background: radial-gradient(#fed6e3 30%, #a8edea 100%);
+    }
+
+    100% {
+      background: radial-gradient(#fed6e3 60%, #a8edea 100%);
+    }
+  }
+
+  &_box {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    left: 120px;
+
+    &:hover {
+      animation: bb .8s reverse infinite;
+    }
+
+    @keyframes bb {
+      0%{
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &_1 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  &_2 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  &_3 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  &_4 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 25px;
+    left: 35px;
+  }
+  &_5 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+  }
+  &_6 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 25px;
+    left: 45px;
+  }
+  &_7 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 30px;
+    left: 45px;
+  }
+  &_8 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+  }
+  &_9 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 40px;
+    left: 35px;
+  }
+  &_10 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 45px;
+    left: 30px;
+  }
+  &_11 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 40px;
+    left: 25px;
+  }
+  &_12 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+  }
+  &_13 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+  }
+  &_14 {
+    height: 5px;
+    width: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+  }
+}
+
+

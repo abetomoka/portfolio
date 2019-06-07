@@ -28,6 +28,24 @@
     h2 {
       font-size: 20px;
     }
+
+    a {
+      text-decoration: none;
+      height: 40px;
+      width: 150px;
+      padding: 8px;
+      margin: 20px 10px 0 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      background: #ffe6e2;
+      color: #333;
+      font-size: 16px;
+      transition: .3s;
+
+      &:hover {
+        box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+      }
+    }
   }
 }
 
@@ -39,6 +57,7 @@
 .work_slick-box {
   margin: auto;
   padding-top: 40px;
+
   img {
     max-height: 700px;
     margin: auto;
@@ -106,6 +125,7 @@
     padding: 15px;
     position: relative;
     transition: .3s;
+
     img {
       background-color: #fff;
       width: 500px;
@@ -113,6 +133,7 @@
       object-fit: cover;
     }
   }
+
   &_txt {
     position: absolute;
     bottom: 50px;
