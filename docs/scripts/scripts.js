@@ -42,6 +42,18 @@ $("document").ready(function(){
   });
 });
 
+$("document").ready(function(){
+  $('.pics_list').slick({
+    autoplay: true,
+    autoplaySpeed: 3500,
+    speed: 900,
+    dots: true,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '10%'
+  });
+});
+
 $(function(){
   var slider = "#slider";
   var thumbnailItem = "#thumbnail-list .thumbnail-item";
@@ -92,16 +104,16 @@ $(document).ready(function(){
   });
 });
 
-$(function(){
-   $('a[href^="#"]').click(function() {
-      var speed = 800;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-   });
-});
+// $(function(){
+//    $('a[href^="#"]').click(function() {
+//       var speed = 800;
+//       var href= $(this).attr("href");
+//       var target = $(href == "#" || href == "" ? 'html' : href);
+//       var position = target.offset().top;
+//       $('body,html').animate({scrollTop:position}, speed, 'swing');
+//       return false;
+//    });
+// });
 
 jQuery(document).ready(function(){
   jQuery('.parallax-layer').parallax({
