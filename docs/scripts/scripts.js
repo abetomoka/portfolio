@@ -132,6 +132,3 @@ $(window).load(function () {
   $('#main-contents').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
 });
 
-
-
-
