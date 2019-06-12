@@ -1,0 +1,47 @@
+.dailyUI {
+  border: 1px solid #333;
+  margin: 30px;
+  padding: 30px;
+  color: #333;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  ul {
+    width: 50%;
+    font-size: 14px;
+    padding: 10px 0;
+
+    li {
+      a {
+        position: relative;
+        padding: 5px;
+        text-decoration: none;
+        color: #1864ff;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: 0;
+          padding-bottom: 10px;
+          padding-left: 200px;
+          background: #1864ff;
+          opacity: 0;
+          text-transform-origin: right top;
+          transform: scale(0, 1);
+          transition: .3s;
+        }
+
+        &:hover {
+          &::before {
+            content: "";
+            transform-origin: left top;
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+}
