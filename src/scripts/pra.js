@@ -42,6 +42,7 @@ $(function() {
         }
     });
 });
+
 $(function(){
     $('.contents00').each(function(i, elem){
         var contentsPOS = $(elem).offset().top;
