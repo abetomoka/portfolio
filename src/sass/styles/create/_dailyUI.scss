@@ -1,47 +1,40 @@
 .dailyUI {
-  border: 1px solid #333;
-  margin: 30px;
-  padding: 30px;
-  color: #333;
+  max-width: 800px;
+  margin: 50px;
 
-  h1 {
-    font-size: 20px;
+  &_title {
+    font-style: 25px;
+    color: #fff;
+    background: #333;
+    padding: 10px;
   }
 
-  ul {
-    width: 50%;
-    font-size: 14px;
-    padding: 10px 0;
+  &_contents {
+    border: 1px solid #333;
 
     li {
-      a {
-        position: relative;
-        padding: 5px;
-        text-decoration: none;
-        color: #1864ff;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 10px;
-          left: 0;
-          padding-bottom: 10px;
-          padding-left: 200px;
-          background: #1864ff;
-          opacity: 0;
-          text-transform-origin: right top;
-          transform: scale(0, 1);
-          transition: .3s;
-        }
-
-        &:hover {
-          &::before {
-            content: "";
-            transform-origin: left top;
-            transform: scale(1, 1);
-          }
-        }
-      }
+      border: 1px solid #333;
+      padding: 10px;
     }
+  }
+
+  &_btn {
+    color: #007bff;
+    font-size: 14px;
+    padding: 0px;
+
+    &:hover {
+      color: #007bff;
+      border-bottom: 1px solid #007bff;
+    }
+  }
+  .modal-header {
+    border-bottom: 2px solid #333;
+  }
+  .modal-content {
+    border: 2px solid #333;
+  }
+  .close {
+    color: #333;
   }
 }
