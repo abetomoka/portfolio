@@ -1,0 +1,56 @@
+$black: #183346;
+
+.inukauWant {
+  width: 85%;
+  margin-left: 15%;
+
+  &_top {
+    height: 15vh;
+    padding: 40px 0 0 40px;
+    background: #e8c778;
+    color: $black;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  &_contents {
+    height: 82vh;
+    overflow: scroll;
+    background: #f7db97;
+
+    a {
+      transition: .3s;
+      display: block;
+      width: 100%;
+      color: $black;
+      text-align: left;
+      padding: 20px 0 20px 40px;
+      text-decoration: none;
+
+      &:hover {
+        background: #fff;
+        color: $black;
+      }
+
+      .title {
+        color: $black;
+        font-size: 16px;
+        letter-spacing: .3em;
+        line-height: 1.3em;
+        text-align: left;
+      }
+
+      .article {
+        font-size: 14px;
+      }
+    }
+  }
+}
