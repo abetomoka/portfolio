@@ -10,11 +10,16 @@
 
     <script type="text/javascript"  src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="../scripts/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="../../images/inukau/logo.png" >
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../../styles/styles.css" rel="stylesheet">
+
   </head>
   <body>
     <div class="inukau">
@@ -35,22 +40,52 @@
       <div class="inukauWant">
         <div class="inukauWant_top">
           <h2>イヌを飼いたい</h2>
-          <p>飼いたいけれど、お悩みがある方へ</p>
+          <p>飼いたいけれど、お悩みがある方へ
+            <br>
+          犬種別の特徴などで個性をみてみましょう</p>
         </div>
 
         <div class="inukauWant_contents">
-          <ul>
-            <li>
-              <a href="#">
-                <p class="title">
-                  総合的に飼いやすい犬種は？
-                </p>
-                <p class="article">
-                  総合的に飼いやすいと言われている犬種を紹介します。自分にあった犬種を見つけるのに是非参考にしてください。
-                </p>
+          <div class="topContents">
+            <h3>犬種の特徴別でみてみる</h3>
+
+<!--         //////スライド -->
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <p>初心者に飼いやすい犬種は？</p>
+                  <img src="../../images/inukau/poodle.png" alt="">
+                  <span>今まで犬を飼ったことがない。でも飼いやすいわんこっているんです！</span>
+                  <a href="#">みてみる</a>
+                </div>
+
+                <div class="carousel-item">
+                  <p>毛の抜けやすい犬種は？</p>
+                  <img src="../../images/inukau/golden.png" alt="">
+                  <span>犬と生活をすると付きまとってくる抜け毛…抜けにくい犬種も紹介します</span>
+                  <a href="#">みてみる</a>
+                </div>
+
+                <div class="carousel-item">
+                  <p>初心者に飼いやすい犬種は？</p>
+                  <img src="../../images/inukau/poodle.jpg" alt="">
+                  <span>今まで犬を飼ったことがない！でも飼いやすいわんこっているんです！</span>
+                  <a href="#">みてみる</a>
+                </div>
+              </div>
+
+              <a class="carousel-control-prev slideBtn" href="#carouselExampleControls" role="button" data-slide="prev">
+                <i class="fas fa-angle-left"></i>
               </a>
-            </li>
-          </ul>
+              <a class="carousel-control-next slideBtn" href="#carouselExampleControls" role="button" data-slide="next">
+                <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+
+<!--             /////スライドおわり -->
+
+          </div>
         </div>
       </div>
 
