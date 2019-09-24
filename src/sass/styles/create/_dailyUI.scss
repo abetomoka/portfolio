@@ -57,4 +57,10 @@
   .close {
     color: #333;
   }
+
+  @media (min-width: 576px) {
+    .modal-dialog-scrollable {
+      max-width: 750px;
+   }
+  }
 }
