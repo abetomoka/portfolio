@@ -121,6 +121,23 @@ jQuery(document).ready(function(){
   });
 });
 
+$(function(){
+    $('.contents00').each(function(i, elem){
+        var contentsPOS = $(elem).offset().top;
+        $(window).on('load scroll resize', function(){
+            var winHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            var showClass = 'show';
+            var timing = 100; // 100pxコンテンツが見えたら次のif文がtrue
+            if (scrollTop >= contentsPOS - winHeight + timing){
+              $(elem).addClass(showClass);
+            } else {
+              $(elem).removeClass(showClass);
+            }
+        });
+    });
+});
+
 $(function() {
   var h = $(window).height(); //ブラウザウィンドウの高さを取得
   $('#main-contents').css('display','none'); //初期状態ではメインコンテンツを非表示
