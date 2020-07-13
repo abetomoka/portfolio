@@ -1,7 +1,10 @@
 @charset "utf-8";
 
-// Common style
 @import "styles/default";
 
-// Common style
 @import "styles/global";
+
+@import "styles/until/color";
+
+@import "styles/section/mainvisual";
+

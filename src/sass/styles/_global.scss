@@ -1,7 +1,75 @@
 /* CSS outline -----------------------------------------------
 
-  1.Common
+  1.global
 
 /*------------------------------------------------------------
 
-1.Common */
+1.global */
+  body {
+    font-family: 'Permanent Marker', 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', sans-serif;
+    position: relative;
+    cursor: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    opacity: .5;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #333;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffe6e2;
+    border-radius: 12px;
+  }
+
+  #loader-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #eef0f4;
+    z-index: 1;
+  }
+
+  #loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+
+  #cursor,
+  #follower {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: none;
+    pointer-events: none;
+  }
+
+  #cursor {
+    width: 20px;
+    height: 20px;
+    background: #ffe6e2;
+    border: 1px solid #eef0f4;
+    z-index: 1001;
+  }
+
+  #follower {
+    width: 40px;
+    height: 40px;
+    background: #ffe6e2;
+    opacity: .8;
+    z-index: 1000;
+  }
