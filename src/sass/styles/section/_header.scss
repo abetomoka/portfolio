@@ -1,0 +1,28 @@
+/* CSS outline -----------------------------------------------
+
+  1.header
+
+/*------------------------------------------------------------
+
+1.header */
+  .header {
+    width: 50%;
+    position: fixed;
+    right: 6px;
+    z-index: 30;
+    padding: 20px 42px;
+    background: #fff;
+
+    &__list {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__item {
+      a {
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+      }
+    }
+  }

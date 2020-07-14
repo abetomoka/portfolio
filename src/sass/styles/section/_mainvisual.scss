@@ -8,16 +8,57 @@
 
   .mainvisual {
     height: 100vh;
-    padding: 10%;
     overflow: hidden;
 
     &__body {
-      width: 100%;
       height: 100%;
-      background: url('../images/top.jpg');
-      background-size: 100%;
-      background-repeat: no-repeat;
       font-size: 25px;
+      padding: 0 10%;
       position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 85%;
+        height: 80%;
+        background: #ffe6e2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: -1;
+      }
+
+      &::after {
+        content: "";
+        width: 50%;
+        height: 100%;
+        background: url('../images/top.jpg');
+        background-size: 300%;
+        background-position: 22% 39%;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
+
+    &__box {
+      display: inline-block;
+      height: 70px;
+      letter-spacing: .1em;
+      line-height: 1.2;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 60;
+    }
+
+    &__title {
+      font-size: 30px;
     }
   }

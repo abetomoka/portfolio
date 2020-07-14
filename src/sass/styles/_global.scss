@@ -34,7 +34,7 @@
     top: 0px;
     left: 0px;
     background: #eef0f4;
-    z-index: 1;
+    z-index: 100;
   }
 
   #loader {
@@ -45,7 +45,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    z-index: 2;
+    z-index: 100;
   }
 
   #cursor,
@@ -56,13 +56,14 @@
     left: 0;
     cursor: none;
     pointer-events: none;
+    z-index: 1002;
   }
 
   #cursor {
     width: 20px;
     height: 20px;
     background: #ffe6e2;
-    border: 1px solid #eef0f4;
+    border: 1px solid #fff;
     z-index: 1001;
   }
 
@@ -72,4 +73,13 @@
     background: #ffe6e2;
     opacity: .8;
     z-index: 1000;
+  }
+
+  .contents__title {
+    font-size: 40px;
+  }
+
+  .contents__subtitle {
+    font-size: 12px;
+    margin-top: 20px;
   }
