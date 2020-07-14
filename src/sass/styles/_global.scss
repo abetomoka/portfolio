@@ -69,3 +69,7 @@ body {
   z-index: 110;
 }
 
+.slick-dots li button::before {
+  font-size: 20px;
+}
+
