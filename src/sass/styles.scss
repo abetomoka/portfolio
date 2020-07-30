@@ -1,32 +1,13 @@
 @charset "utf-8";
 
-// SCSS factor
-@import "styles/utils/clearfix";
-
-// Common style
 @import "styles/default";
 
-// Common style
 @import "styles/global";
 
-// Common style
-@import "styles/section/nav";
+@import "styles/until/color";
+
 @import "styles/section/header";
-@import "styles/section/top";
-@import "styles/section/footer";
-
-// Common style
-@import "styles/section/scroll";
-@import "styles/section/works";
-@import "styles/section/photos";
+@import "styles/section/mainvisual";
 @import "styles/section/about";
-@import "styles/section/contact";
-@import "styles/section/concept";
-
-// Common style
-@import "styles/pages/works";
-@import "styles/pages/photos";
-
-// Common style
-@import "styles/create/inukau/main";
-@import "styles/create/inukau/want";
+@import "styles/section/works";
+@import "styles/section/profile";
