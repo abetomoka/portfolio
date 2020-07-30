@@ -54,15 +54,15 @@
 
       TweenMax.set(follower, {
           css: {    
-            left: posX - (fWidth / 2),
-            top: posY - (fWidth / 2)
+            top: posY - (fWidth / 1),
+            left: posX - (fWidth / 1)
           }
       });
 
       TweenMax.set(cursor, {
           css: {    
-            left: mouseX - (cWidth / 2),
-            top: mouseY - (cWidth / 2)
+            top: mouseY - (cWidth / 1),
+            left: mouseX - (cWidth / 1)
           }
       });
     }
@@ -71,15 +71,4 @@
   $(document).on("mousemove", function(e) {
       mouseX = e.pageX;
       mouseY = e.pageY;
-  });
-
-  $("a").on({
-    "mouseenter": function() {
-      cursor.addClass("is-active");
-      follower.addClass("is-active");
-    },
-    "mouseleave": function() {
-      cursor.removeClass("is-active");
-      follower.removeClass("is-active");
-    }
   });

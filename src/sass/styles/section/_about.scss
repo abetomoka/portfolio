@@ -1,0 +1,25 @@
+/* CSS outline -----------------------------------------------
+
+  1.about
+
+/*------------------------------------------------------------
+
+1.about */
+.about {
+  max-width: 980px;
+  padding: 0 15%;
+  margin: 20px auto;
+
+  &__text {
+    display: inline-block;
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: .2em;
+    margin-top: 20px;
+
+    span {
+      background: $pink;
+    }
+  }
+}
