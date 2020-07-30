@@ -54,15 +54,15 @@
 
       TweenMax.set(follower, {
           css: {    
-            top: posY - (fWidth / 1),
-            left: posX - (fWidth / 1)
+            top: posY - (fWidth / 2),
+            left: posX - (fWidth / 2)
           }
       });
 
       TweenMax.set(cursor, {
           css: {    
-            top: mouseY - (cWidth / 1),
-            left: mouseX - (cWidth / 1)
+            top: mouseY - (cWidth / 3),
+            left: mouseX - (cWidth / 3)
           }
       });
     }
@@ -72,3 +72,5 @@
       mouseX = e.pageX;
       mouseY = e.pageY;
   });
+
+  
