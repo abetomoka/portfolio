@@ -15,9 +15,9 @@
 
     img {
       width: 100%;
-      height: 100px;
+      height: 150px;
       object-fit: cover;
-      object-position: 0 -51px;
+      object-position: 0 -40px;
     }
   }
 
@@ -28,5 +28,14 @@
     line-height: 1.6;
     letter-spacing: .2em;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__body {
+      img {
+        height: 150px;
+        object-position: 0 -10px;
+      }
+    }
   }
 }
