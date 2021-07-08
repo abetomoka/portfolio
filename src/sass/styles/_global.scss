@@ -58,6 +58,10 @@
     cursor: none;
     pointer-events: none;
     z-index: 1002;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   #cursor {
