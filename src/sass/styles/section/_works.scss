@@ -69,10 +69,11 @@
   @media screen and (max-width: 767px) {
     padding: 0 4%;
 
-    &__item {
-    a {
-      width: 80px;
-      height: 80px;
+      &__item {
+      a {
+        width: 80px;
+        height: 80px;
+      }
     }
   }
 }
