@@ -1,76 +1,42 @@
+// Hamburger
+const btn = document.getElementById('hamburger');
+const nav = document.getElementById('navLinks');
+btn.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
-// loading
+// Filter
+document.querySelectorAll('.filter-btn').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+  });
+});
 
-  $(function() {
-    var h = $(window).height();
-    
-    $('#wrap').css('display','none');
-    $('#loader-bg ,#loader').height(h).css('display','block');
-  });
-    
-  $(window).load(function () {
-    $('#loader-bg').delay(900).fadeOut(800);
-    $('#loader').delay(600).fadeOut(300);
-    $('#wrap').css('display', 'block');
-  });
-    
-  $(function(){
-    setTimeout('stopload()',10000);
-  });
-    
-  function stopload(){
-    $('#wrap').css('display','block');
-    $('#loader-bg').delay(900).fadeOut(800);
-    $('#loader').delay(600).fadeOut(300);
+// Contact form
+function handleContact(e) {
+  e.preventDefault();
+  const email = document.getElementById('contactEmail').value;
+  if (email) {
+    alert('ありがとうございます！' + email + ' 宛に確認メールをお送りします。\n2営業日以内にご連絡します。');
+    document.getElementById('contactEmail').value = '';
   }
+}
 
-// Cursor
-
-  const stalker = document.createElement('div'); 
-  stalker.id = 'cursor';
-  document.body.appendChild(stalker);   
-
-  const stalker2 = document.createElement('div'); 
-  stalker2.id = 'follower';
-  document.body.appendChild(stalker2);   
-
-
-  var
-  cursor = $("#cursor"),
-  follower = $("#follower"),
-  cWidth = 8,
-  fWidth = 40,
-  delay = 10,
-  mouseX = 0,
-  mouseY = 0,
-  posX = 0,
-  posY = 0;
-
-  TweenMax.to({}, .001, {
-    repeat: -1,
-    onRepeat: function() {
-      posX += (mouseX - posX) / delay;
-      posY += (mouseY - posY) / delay;
-
-      TweenMax.set(follower, {
-          css: {    
-            top: posY - (fWidth / 2),
-            left: posX - (fWidth / 2)
-          }
-      });
-
-      TweenMax.set(cursor, {
-          css: {    
-            top: mouseY - (cWidth / 3),
-            left: mouseX - (cWidth / 3)
-          }
-      });
+// Scroll fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
     }
   });
+}, { threshold: 0.08 });
 
-  $(document).on("mousemove", function(e) {
-      mouseX = e.pageX;
-      mouseY = e.pageY;
-  });
-
-  
+document.querySelectorAll('.work-card, .service-item, .testi-card, .process-step').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.35s, background 0.3s';
+  observer.observe(el);
+});
