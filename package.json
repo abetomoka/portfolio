@@ -21,12 +21,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^7.2.4",
+    "autoprefixer": "^10.4.14",
     "browser-sync": "^2.26.7",
     "cpx": "^1.5.0",
     "node-sass": "^4.13.0",
     "nodemon": "^1.14.11",
-    "postcss-cli": "^4.1.1",
+    "postcss-cli": "^10.1.0",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
     "scrollreveal": "^3.4.0"
