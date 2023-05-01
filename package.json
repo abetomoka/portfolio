@@ -24,7 +24,7 @@
     "autoprefixer": "^7.2.4",
     "browser-sync": "^2.26.7",
     "cpx": "^1.5.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^8.0.0",
     "nodemon": "^1.14.11",
     "postcss-cli": "^4.1.1",
     "pug": "^2.0.4",
