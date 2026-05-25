@@ -405,6 +405,253 @@
     }, 6200);
   }
 
+  // Interactive soap bubbles for the About visual
+  const aboutBubbleCanvas = document.getElementById('aboutBubbles3d');
+
+  function startBubbleFallback(canvas) {
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    let frame = 0;
+    const bubbles = [
+      { x: 0.22, y: 0.28, r: 70, vx: 0.25, vy: -0.16, hue: '255,214,227', pop: 0 },
+      { x: 0.72, y: 0.22, r: 96, vx: -0.18, vy: 0.12, hue: '210,242,255', pop: 0 },
+      { x: 0.56, y: 0.64, r: 118, vx: 0.12, vy: -0.1, hue: '255,236,178', pop: 0 },
+      { x: 0.16, y: 0.72, r: 84, vx: 0.22, vy: 0.1, hue: '221,220,255', pop: 0 },
+      { x: 0.88, y: 0.62, r: 62, vx: -0.2, vy: -0.14, hue: '206,250,235', pop: 0 }
+    ];
+
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+      canvas.width = Math.max(1, Math.floor(rect.width * ratio));
+      canvas.height = Math.max(1, Math.floor(rect.height * ratio));
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+
+    function resetBubble(bubble) {
+      bubble.x = 0.12 + Math.random() * 0.76;
+      bubble.y = 0.12 + Math.random() * 0.76;
+      bubble.r = 58 + Math.random() * 74;
+      bubble.pop = 0;
+    }
+
+    canvas.addEventListener('pointerdown', (event) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const hit = bubbles.find((bubble) => {
+        const dx = x - bubble.x * rect.width;
+        const dy = y - bubble.y * rect.height;
+        return Math.hypot(dx, dy) < bubble.r;
+      });
+      if (hit) hit.pop = 1;
+    });
+
+    function draw() {
+      const rect = canvas.getBoundingClientRect();
+      ctx.clearRect(0, 0, rect.width, rect.height);
+      const t = frame * 0.012;
+      bubbles.forEach((bubble, index) => {
+        bubble.x += bubble.vx * 0.0008;
+        bubble.y += bubble.vy * 0.0008;
+        if (bubble.x < -0.05) bubble.x = 1.05;
+        if (bubble.x > 1.05) bubble.x = -0.05;
+        if (bubble.y < -0.05) bubble.y = 1.05;
+        if (bubble.y > 1.05) bubble.y = -0.05;
+
+        if (bubble.pop > 0) {
+          const cx = bubble.x * rect.width;
+          const cy = bubble.y * rect.height;
+          ctx.beginPath();
+          ctx.arc(cx, cy, bubble.r * (1.15 + (1 - bubble.pop) * 0.8), 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(${bubble.hue}, ${bubble.pop * 0.42})`;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+          bubble.pop -= 0.045;
+          if (bubble.pop <= 0) resetBubble(bubble);
+          return;
+        }
+
+        const cx = bubble.x * rect.width + Math.sin(t + index) * 9;
+        const cy = bubble.y * rect.height + Math.cos(t * 0.8 + index) * 11;
+        const radius = bubble.r + Math.sin(t * 1.2 + index) * 5;
+        const gradient = ctx.createRadialGradient(cx - radius * 0.34, cy - radius * 0.32, radius * 0.06, cx, cy, radius);
+        gradient.addColorStop(0, 'rgba(255,255,255,0.78)');
+        gradient.addColorStop(0.42, `rgba(${bubble.hue}, 0.22)`);
+        gradient.addColorStop(1, `rgba(${bubble.hue}, 0.04)`);
+        ctx.beginPath();
+        ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.36)';
+        ctx.lineWidth = 1.4;
+        ctx.stroke();
+      });
+      frame += 1;
+      requestAnimationFrame(draw);
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+    draw();
+  }
+
+  async function startThreeBubbles(canvas) {
+    if (!canvas) return;
+    try {
+      const THREE = await import('https://unpkg.com/three@0.164.1/build/three.module.js');
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setClearColor(0x000000, 0);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+      camera.position.set(0, 0, 8);
+
+      const raycaster = new THREE.Raycaster();
+      const pointer = new THREE.Vector2();
+      const bubbleGroup = new THREE.Group();
+      scene.add(bubbleGroup);
+
+      const geometry = new THREE.SphereGeometry(1, 54, 54);
+      const bubbleData = [
+        { x: -2.8, y: 1.55, z: -1.2, s: 0.82, color: 0xffd6e3 },
+        { x: 2.55, y: 1.2, z: -0.8, s: 1.08, color: 0xcff1ff },
+        { x: 0.55, y: -1.45, z: -1.6, s: 1.34, color: 0xffefbd },
+        { x: -2.2, y: -1.32, z: -0.4, s: 0.92, color: 0xdedaff },
+        { x: 3.05, y: -0.75, z: -1.4, s: 0.72, color: 0xd5f8eb },
+        { x: -0.2, y: 1.85, z: -2.0, s: 0.64, color: 0xffffff },
+        { x: 1.72, y: 0.05, z: -2.2, s: 0.48, color: 0xffd7bd }
+      ];
+
+      const bubbles = bubbleData.map((data, index) => {
+        const material = new THREE.MeshPhysicalMaterial({
+          color: data.color,
+          transparent: true,
+          opacity: 0.34,
+          roughness: 0.05,
+          metalness: 0,
+          transmission: 0.72,
+          thickness: 0.9,
+          clearcoat: 1,
+          clearcoatRoughness: 0.12,
+          ior: 1.2,
+          depthWrite: false
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.position.set(data.x, data.y, data.z);
+        mesh.scale.setScalar(data.s);
+        mesh.userData.base = { ...data, phase: index * 0.72 };
+
+        const rim = new THREE.Mesh(
+          geometry,
+          new THREE.MeshBasicMaterial({
+            color: 0xffffff,
+            transparent: true,
+            opacity: 0.12,
+            wireframe: true,
+            depthWrite: false
+          })
+        );
+        rim.scale.setScalar(1.018);
+        mesh.add(rim);
+        bubbleGroup.add(mesh);
+        return { mesh, material, rim, pop: 0 };
+      });
+
+      scene.add(new THREE.AmbientLight(0xffffff, 2.1));
+      const keyLight = new THREE.DirectionalLight(0xffffff, 2.3);
+      keyLight.position.set(2.2, 3.4, 4);
+      scene.add(keyLight);
+      const candyLight = new THREE.PointLight(0xffb3d5, 4.5, 9);
+      candyLight.position.set(-3, -1.7, 3);
+      scene.add(candyLight);
+      const blueLight = new THREE.PointLight(0x9fdaff, 4.2, 9);
+      blueLight.position.set(3.2, 1.6, 3);
+      scene.add(blueLight);
+
+      function resize() {
+        const rect = canvas.getBoundingClientRect();
+        const width = Math.max(1, Math.floor(rect.width));
+        const height = Math.max(1, Math.floor(rect.height));
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+
+      function resetBubble(item) {
+        const base = item.mesh.userData.base;
+        item.mesh.position.set(base.x + (Math.random() - 0.5) * 0.8, base.y + (Math.random() - 0.5) * 0.5, base.z);
+        item.mesh.scale.setScalar(base.s * 0.2);
+        item.material.opacity = 0;
+        item.rim.material.opacity = 0;
+        item.pop = -1;
+      }
+
+      function popBubble(mesh) {
+        const item = bubbles.find((bubble) => bubble.mesh === mesh);
+        if (!item || item.pop > 0) return;
+        item.pop = 1;
+      }
+
+      canvas.addEventListener('pointerdown', (event) => {
+        const rect = canvas.getBoundingClientRect();
+        pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        pointer.y = -(((event.clientY - rect.top) / rect.height) * 2 - 1);
+        raycaster.setFromCamera(pointer, camera);
+        const hits = raycaster.intersectObjects(bubbles.map((bubble) => bubble.mesh), false);
+        if (hits.length) popBubble(hits[0].object);
+      });
+
+      function animate(time) {
+        const t = time * 0.001;
+        bubbles.forEach((item, index) => {
+          const base = item.mesh.userData.base;
+          const driftX = Math.sin(t * 0.42 + base.phase) * 0.22;
+          const driftY = Math.cos(t * 0.36 + base.phase) * 0.18;
+          item.mesh.position.x += ((base.x + driftX) - item.mesh.position.x) * 0.018;
+          item.mesh.position.y += ((base.y + driftY) - item.mesh.position.y) * 0.018;
+          item.mesh.rotation.x = Math.sin(t * 0.36 + index) * 0.18;
+          item.mesh.rotation.y += 0.003 + index * 0.0004;
+
+          if (item.pop > 0) {
+            const burst = 1 + (1 - item.pop) * 0.95;
+            item.mesh.scale.setScalar(base.s * burst);
+            item.material.opacity = 0.34 * item.pop;
+            item.rim.material.opacity = 0.18 * item.pop;
+            item.pop -= 0.052;
+            if (item.pop <= 0) resetBubble(item);
+            return;
+          }
+
+          if (item.pop < 0) {
+            const nextOpacity = Math.min(0.34, item.material.opacity + 0.012);
+            const nextScale = Math.min(base.s, item.mesh.scale.x + base.s * 0.025);
+            item.material.opacity = nextOpacity;
+            item.rim.material.opacity = Math.min(0.12, item.rim.material.opacity + 0.005);
+            item.mesh.scale.setScalar(nextScale);
+            if (nextScale >= base.s && nextOpacity >= 0.34) item.pop = 0;
+            return;
+          }
+
+          const pulse = 1 + Math.sin(t * 1.05 + base.phase) * 0.045;
+          item.mesh.scale.setScalar(base.s * pulse);
+          item.material.opacity = 0.27 + Math.sin(t * 0.7 + base.phase) * 0.04;
+        });
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      requestAnimationFrame(animate);
+    } catch (e) {
+      startBubbleFallback(canvas);
+    }
+  }
+
+  startThreeBubbles(aboutBubbleCanvas);
+
   // Scroll fade-in
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
