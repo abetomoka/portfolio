@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abe Tomoka — Web / UI UX Designer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./portfolio.css?v=20260525">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2SLCCK4W83"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2SLCCK4W83');
+</script>
+</head>
+<body>
+<div class="sparkle-drift" aria-hidden="true">
+  <i class="sp" style="top: 12%; left: 8%; --dur: 2.6s;">✦</i>
+  <i class="sp s2 blue" style="top: 24%; right: 12%; --dur: 3.4s; --delay: .4s;">✦</i>
+  <i class="sp s3 violet" style="top: 48%; left: 4%; --dur: 4s; --delay: .9s;">✦</i>
+  <i class="sp" style="top: 66%; right: 7%; --dur: 2.9s; --delay: 1.2s;">✦</i>
+  <i class="sp s2 violet" style="bottom: 10%; left: 14%; --dur: 3.6s; --delay: .2s;">✦</i>
+  <i class="sp s3 blue" style="bottom: 22%; right: 18%; --dur: 4.2s; --delay: 1.5s;">✦</i>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">AT.</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#works">Works</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="mailto:abea816@gmail.com" class="nav-cta">お問い合わせ</a></li>
+  </ul>
+  <div class="theme-switch" aria-label="ナイトモード切り替え">
+    <span class="theme-switch-label">☀</span>
+    <button class="switch-track" id="themeSwitch" type="button" aria-label="ナイトモードに切り替え" aria-pressed="false">
+      <span class="switch-thumb"></span>
+    </button>
+    <span class="theme-switch-label">☾</span>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge"><span class="badge-dot">✦</span>Web / UI UX Designer · Figma / Design / Coding</div>
+  <h1 class="hero-title">
+    <span class="line1">Web / UI UX</span>
+    <span class="line2">Abe Tomoka.</span>
+    <span class="line3">✦</span>
+  </h1>
+  <p class="hero-sub">web・UI/UXを中心に、要件整理から画面設計、Figma制作、実装を見据えたデザインまで伴走します。事業やチームの状況を一緒に整理しながら、使いやすく成果につながる形へ落とし込みます。</p>
+  <div class="hero-actions">
+    <a href="#works" class="btn-primary"><span class="btn-icon">🙈</span>実績を見る</a>
+    <a href="mailto:abea816@gmail.com" class="btn-secondary"><span class="btn-icon">💭</span>相談する</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-num">2017</div>
+      <div class="stat-label">Design Career</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Behance Works</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">Figma</div>
+      <div class="stat-label">Main Tool</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Web Design</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">UI / UX</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Figma</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">FigJam</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Photoshop</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Illustrator</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">HTML / CSS / Sass</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Notion / Slack / GitHub</span>
+    <span class="marquee-item accent">✦</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Web Design</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">UI / UX</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Figma</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">FigJam</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Photoshop</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Illustrator</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">HTML / CSS / Sass</span>
+    <span class="marquee-item accent">✦</span>
+    <span class="marquee-item">Notion / Slack / GitHub</span>
+    <span class="marquee-item accent">✦</span>
+  </div>
+</div>
+
+<!-- WORKS -->
+<section class="works" id="works">
+  <div class="container">
+    <div class="works-header">
+      <div>
+        <div class="section-label">Selected Works</div>
+        <div class="works-title-row">
+          <h2 class="section-title">厳選した<span>実績</span></h2>
+          <button class="works-lock-toggle" id="worksLockToggle" type="button" aria-expanded="false" aria-controls="worksAccess" aria-label="限定公開の入力欄を開く">🔒</button>
+        </div>
+      </div>
+      <div class="works-filter" id="worksFilter" aria-label="実績タグで絞り込み"></div>
+    </div>
+
+    <div class="works-access" id="worksAccess">
+      <div>
+        <div class="works-access-kicker">🙈 Limited Detail</div>
+        <div class="works-access-title">詳細は限定公開にしています。</div>
+        <p class="works-access-text">公開できる範囲で掲載しています。制作プロセスや担当範囲まで見たい方は、パスコードで詳細閲覧モードに切り替えてください。</p>
+        <p class="works-access-status" id="worksAccessStatus"><span class="works-access-status-title">詳細をご確認できます。</span>限定公開を解除しています。各実績をクリックすると、制作プロセスや担当範囲までご覧いただけます。</p>
+      </div>
+      <form class="works-access-form" id="worksAccessForm">
+        <div class="works-access-row">
+          <input class="works-passcode" id="worksPasscode" type="password" autocomplete="current-password" placeholder="パスコード">
+        </div>
+        <label class="works-consent">
+          <p class="works-consent-text">公開不可のものも含めて抜粋して載せております。外部公開はお控えください。</p>
+          <span class="works-consent-check"><input id="worksConsent" type="checkbox">理解した</span>
+        </label>
+        <div class="works-access-row">
+          <button class="works-unlock-btn" type="submit">詳細をまとめて開放</button>
+        </div>
+        <div class="works-access-error" id="worksAccessError">パスコードと同意チェックをご確認ください。</div>
+      </form>
+    </div>
+
+    <div class="works-grid">
+
+      <div class="work-card has-image featured" tabindex="0" role="button" aria-label="エンジニアスクール 再の詳細を開く" data-title="エンジニアスクール (再)" data-tag="UI/UX · ブランド · web · コーディング" data-meta="担当: フリーランス" data-filters="UI/UX|Brand|Web|Coding" data-image="./assets/エンジニアスクール-再.png" data-work-id="work-1">
+        <div class="card-bg bg1"></div>
+        <img class="card-image" src="./assets/エンジニアスクール-再.png" alt="エンジニアスクール (再)のデザイン画像">
+        <div class="card-mockup">
+          <div class="mockup-inner">
+            <div class="mockup-bar accent w80"></div>
+            <div class="mockup-bar w60"></div>
+            <div class="mockup-blocks">
+              <div class="mockup-block coral"></div>
+              <div class="mockup-block"></div>
+              <div class="mockup-block blue"></div>
+              <div class="mockup-block coral"></div>
+            </div>
+            <div class="mockup-bar w40"></div>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">エンジニアスクール (再)</div>
+          <div class="card-meta">フリーランス · UI/UX · ブランド · web · コーディング</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image medium" tabindex="0" role="button" aria-label="製造業向けサービスプロダクト開発の詳細を開く" data-title="機械部品など製造業で必要な部品の製造・販売を行う企業さまにてサービスプロダクト開発" data-tag="UI/UX · グラフィックデザイン · web · マーケティング · コーディング" data-meta="担当: フリーランス" data-filters="UI/UX|Graphic|Web|Marketing|Coding" data-image="./assets/機械部品など製造業で必要な部品の製造・販売を行う企業さまにてサービスプロダクト開発.png" data-work-id="work-2">
+        <div class="card-bg bg2"></div>
+        <img class="card-image" src="./assets/機械部品など製造業で必要な部品の製造・販売を行う企業さまにてサービスプロダクト開発.png" alt="機械部品など製造業で必要な部品の製造・販売を行う企業さまにてサービスプロダクト開発のデザイン画像">
+        <div class="card-mockup">
+          <div class="mockup-inner" style="background: rgba(240,232,255,0.9);">
+            <div class="mockup-bar blue w80"></div>
+            <div class="mockup-bar w50"></div>
+            <div class="mockup-blocks">
+              <div class="mockup-block blue"></div>
+              <div class="mockup-block coral"></div>
+            </div>
+            <div class="mockup-bar w60"></div>
+            <div class="mockup-bar w40"></div>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">製造業向け<br>サービスプロダクト開発</div>
+          <div class="card-meta">フリーランス · UI/UX · web · マーケティング</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="らぼるの詳細を開く" data-title="らぼる 専修大学附属高等学校の「土曜講座」のブログ・紹介web" data-tag="UI/UX · ブランド · web · アニメーション提案 · コーディング" data-meta="担当: フリーランス" data-filters="UI/UX|Brand|Web|Animation|Coding" data-image="./assets/らぼる-専修大学附属高等学校の土曜講座のブログ・紹介web.png" data-work-id="work-3">
+        <div class="card-bg bg3"></div>
+        <img class="card-image" src="./assets/らぼる-専修大学附属高等学校の土曜講座のブログ・紹介web.png" alt="らぼる 専修大学附属高等学校の「土曜講座」のブログ・紹介webのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">らぼる<br>土曜講座の紹介web</div>
+          <div class="card-meta">フリーランス · アニメーション提案 · コーディング</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="PETOKOTOデザイナーの詳細を開く" data-title="PETOKOTO デザイナー" data-tag="UI/UX · グラフィックデザイン · web · マーケティング" data-meta="担当: PETOKOTO" data-filters="UI/UX|Graphic|Web|Marketing" data-image="./assets/PETOKOTO-デザイナー.png" data-work-id="work-4">
+        <div class="card-bg bg4"></div>
+        <img class="card-image" src="./assets/PETOKOTO-デザイナー.png" alt="PETOKOTO デザイナーのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">PETOKOTO<br>デザイナー</div>
+          <div class="card-meta">PETOKOTO · グラフィック · web · マーケティング</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="企業間取引サービスの詳細を開く" data-title="企業間取引における販売促進・マーケティング支援サービス" data-tag="UI/UX" data-meta="担当: フリーランス" data-filters="UI/UX" data-image="./assets/企業間取引における販売促進・マーケティング支援サービス.png" data-work-id="work-5">
+        <div class="card-bg bg5"></div>
+        <img class="card-image" src="./assets/企業間取引における販売促進・マーケティング支援サービス.png" alt="企業間取引における販売促進・マーケティング支援サービスのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">企業間取引の<br>販売促進支援サービス</div>
+          <div class="card-meta">フリーランス · UI/UX</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image half" tabindex="0" role="button" aria-label="美容サプリのショッピングページの詳細を開く" data-title="美容サプリのショッピングページ" data-tag="UI/UX · グラフィックデザイン · マーケティング" data-meta="担当: フリーランス" data-filters="UI/UX|Graphic|Marketing" data-image="./assets/美容サプリのショッピングページ.png" data-work-id="work-6">
+        <div class="card-bg bg1" style="background: linear-gradient(145deg, #E8F8FF 0%, #F5E8FF 100%);"></div>
+        <img class="card-image" src="./assets/美容サプリのショッピングページ.png" alt="美容サプリのショッピングページのデザイン画像">
+        <div class="card-mockup" style="width: 50%;">
+          <div class="mockup-inner" style="background: rgba(232,248,255,0.9);">
+            <div class="mockup-bar blue w80"></div>
+            <div class="mockup-bar w40"></div>
+            <div class="mockup-blocks">
+              <div class="mockup-block blue"></div>
+              <div class="mockup-block coral"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">美容サプリの<br>ショッピングページ</div>
+          <div class="card-meta">フリーランス · グラフィック · マーケティング</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image half" tabindex="0" role="button" aria-label="エンジニアスクールの詳細を開く" data-title="エンジニアスクール" data-tag="UI/UX · ブランド · グラフィックデザイン · マーケティング · web · キャラクターデザイン" data-meta="担当: スタートアップテクノロジー" data-filters="UI/UX|Brand|Graphic|Marketing|Web|Character" data-image="./assets/エンジニアスクール.png" data-work-id="work-7">
+        <div class="card-bg" style="background: linear-gradient(145deg, #FFF0EA 0%, #FFF8E8 100%);"></div>
+        <img class="card-image" src="./assets/エンジニアスクール.png" alt="エンジニアスクールのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">エンジニアスクール</div>
+          <div class="card-meta">スタートアップテクノロジー · ブランド · web</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="大手車メーカーのLPの詳細を開く" data-title="大手車メーカーのLP" data-tag="UI/UX · web · グラフィックデザイン" data-meta="担当: フリーランス" data-filters="UI/UX|Web|Graphic" data-image="./assets/大手車メーカーのLP.png" data-work-id="work-8">
+        <div class="card-bg bg2"></div>
+        <img class="card-image" src="./assets/大手車メーカーのLP.png" alt="大手車メーカーのLPのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">大手車メーカーのLP</div>
+          <div class="card-meta">フリーランス · UI/UX · web · グラフィック</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="スポーツメーカーのネットラジオ番組まとめの詳細を開く" data-title="スポーツメーカーのネットラジオ番組のまとめ" data-tag="UI/UX · web · アニメーション提案" data-meta="担当: フリーランス" data-filters="UI/UX|Web|Animation" data-image="./assets/スポーツメーカーのネットラジオ番組のまとめ.png" data-work-id="work-9">
+        <div class="card-bg bg3"></div>
+        <img class="card-image" src="./assets/スポーツメーカーのネットラジオ番組のまとめ.png" alt="スポーツメーカーのネットラジオ番組のまとめのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">ネットラジオ番組の<br>まとめ</div>
+          <div class="card-meta">フリーランス · UI/UX · web · アニメーション提案</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="オンライン医療サービスの詳細を開く" data-title="オンライン医療サービス" data-tag="UI/UX · web · グラフィックデザイン" data-meta="担当: フリーランス / スタートアップテクノロジー" data-filters="UI/UX|Web|Graphic" data-image="./assets/オンライン医療サービス.png" data-work-id="work-10">
+        <div class="card-bg bg4"></div>
+        <img class="card-image" src="./assets/オンライン医療サービス.png" alt="オンライン医療サービスのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">オンライン医療サービス</div>
+          <div class="card-meta">フリーランス / スタートアップテクノロジー</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="大手電機メーカーのLPの詳細を開く" data-title="大手電機メーカーのLP" data-tag="UI/UX · web · グラフィックデザイン" data-meta="担当: フリーランス" data-filters="UI/UX|Web|Graphic" data-image="./assets/大手電機メーカーのLP.png" data-work-id="work-11">
+        <div class="card-bg bg5"></div>
+        <img class="card-image" src="./assets/大手電機メーカーのLP.png" alt="大手電機メーカーのLPのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">大手電機メーカーのLP</div>
+          <div class="card-meta">フリーランス · UI/UX · web · グラフィック</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image half" tabindex="0" role="button" aria-label="シニア向けコミュニティサービスの詳細を開く" data-title="シニア向けコミュニティサービス" data-tag="UI/UX · グラフィックデザイン · ブランド · web" data-meta="担当: フリーランス" data-filters="UI/UX|Graphic|Brand|Web" data-image="./assets/シニア向けコミュニティサービス.png" data-work-id="work-12">
+        <div class="card-bg bg1" style="background: linear-gradient(145deg, #F0E8FF 0%, #E8FFF8 100%);"></div>
+        <img class="card-image" src="./assets/シニア向けコミュニティサービス.png" alt="シニア向けコミュニティサービスのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">シニア向け<br>コミュニティサービス</div>
+          <div class="card-meta">フリーランス · UI/UX · ブランド · web</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image half" tabindex="0" role="button" aria-label="時間を売買するサービスの詳細を開く" data-title="時間を売買するサービス" data-tag="UI/UX · ブランド · グラフィックデザイン · マーケティング" data-meta="担当: スタートアップテクノロジー" data-filters="UI/UX|Brand|Graphic|Marketing" data-image="./assets/時間を売買するサービス.png" data-work-id="work-13">
+        <div class="card-bg" style="background: linear-gradient(145deg, #FFF8E8 0%, #FFE8F5 100%);"></div>
+        <img class="card-image" src="./assets/時間を売買するサービス.png" alt="時間を売買するサービスのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">時間を売買するサービス</div>
+          <div class="card-meta">スタートアップテクノロジー · UI/UX · ブランド</div>
+        </div>
+      </div>
+
+      <div class="work-card has-image small" tabindex="0" role="button" aria-label="業界別テスト品質向上支援サービスの詳細を開く" data-title="業界別テスト品質向上支援サービス" data-tag="UI/UX" data-meta="担当: スタートアップテクノロジー" data-filters="UI/UX" data-image="./assets/業界別テスト品質向上支援サービス.png" data-work-id="work-14">
+        <div class="card-bg bg2"></div>
+        <img class="card-image" src="./assets/業界別テスト品質向上支援サービス.png" alt="業界別テスト品質向上支援サービスのデザイン画像">
+        <div class="card-arrow">↗</div>
+        <div class="card-content">
+          <div class="card-tag" aria-label="実績タグ"></div>
+          <div class="card-title">業界別テスト品質<br>向上支援サービス</div>
+          <div class="card-meta">スタートアップテクノロジー · UI/UX</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section class="career" id="career">
+  <div class="container">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">これまでの<span>経歴</span></h2>
+    <p class="career-intro">制作会社、フリーランス、事業会社での業務委託を経て、現在もフリーランスとして活動しています。サービス改善、LP制作、ブランド設計、Figma運用整理まで、チームの一員として事業に必要なデザインを支えます。</p>
+
+    <div class="career-timeline">
+      <div class="career-item">
+        <div class="career-date">2018年3月</div>
+        <div>
+          <div class="career-title">多摩美術大学 美術学部 情報デザイン学科 情報デザイン専攻 卒業</div>
+          <div class="career-desc">情報デザインを専攻し、web・UI/UXにつながる設計や表現の基礎を学びました。</div>
+        </div>
+      </div>
+
+      <div class="career-item">
+        <div class="career-date">2017年8月 - 2020年2月</div>
+        <div>
+          <div class="career-title">株式会社スタートアップテクノロジー</div>
+          <div class="career-desc">アルバイト期間を含めて在籍。スタートアップやwebサービスの制作現場で、デザイン業務に携わりました。</div>
+          <details class="career-detail">
+            <summary>概要・担当範囲</summary>
+            <div class="career-detail-body">
+              <p>入社前アルバイトより、web・UI/UX・コーディングを主に担当。業務委託会社だったため、お客様のご意見ややりたいことをお聞きしながら業務を進めていました。</p>
+              <p>大きなプロジェクトとしては、社長が旗振りを行っていたエンジニアスクールのブランディングをデザインリーダーとして担当。</p>
+              <p>卒業制作で作成していたペット x ITを現実化させるため、社会についてもっと知りたいと考え退職へ。</p>
+              <div class="career-detail-meta">事業内容: インターネットのwebシステム、webサイト、webコンテンツの企画・開発・制作・運営・管理、それらの受託およびコンサルティング / 従業員数: 20〜30人</div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="career-item">
+        <div class="career-date">2020年2月 - 2023年8月</div>
+        <div>
+          <div class="career-title">フリーランス</div>
+          <div class="career-desc">web・UI/UXを中心に、Figmaを使った画面設計やデザイン制作を担当。要件定義や設計段階から相談できる進め方を大切にしてきました。</div>
+          <details class="career-detail">
+            <summary>概要・担当範囲</summary>
+            <div class="career-detail-body">
+              <p>前社でお世話になっていた案件を主に、web・UI/UX・コーディングを担当。</p>
+              <p>チームラボ様、GoodPatch Anywhere様、Cecai様などから仕事を受け、デザイナーとして経験を重ねました。</p>
+              <p>そのほか、キャラクターデザインやチラシ・名刺などの紙ものデザインも担当。</p>
+              <div class="career-detail-meta">事業内容: webデザイン、UI/UXデザイン、印刷物のデザインなど、デザインできるもの・改善したいものを区別せず扱うデザイナー / 従業員数: 1人</div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="career-item">
+        <div class="career-date">2023年5月 - 2023年12月</div>
+        <div>
+          <div class="career-title">株式会社PETOKOTO</div>
+          <div class="career-desc">業務委託期間を含めて参加。チームの一員として、事業やプロダクトに関わるデザイン業務に携わりました。</div>
+          <details class="career-detail">
+            <summary>概要・担当範囲</summary>
+            <div class="career-detail-body">
+              <p>卒業制作でも扱っていた犬猫の保護犬猫問題などを解決していこうというマインドに共感し、参加。</p>
+              <p>web・UI/UXを中心に、コーポレートの更新やユーザーが使用するサービスの改善、Figmaの整理整頓を担当。</p>
+              <p>Figma上のデザインシステムを整理し、社内に浸透させる取り組みも行いました。そのほか、バナー作成・紙もののデザインなども担当。</p>
+              <div class="career-detail-meta">事業内容: ペットに関わるインターネット関連サービス / 従業員数: 20人</div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="career-item">
+        <div class="career-date">2024年1月 - 現在</div>
+        <div>
+          <div class="career-title">フリーランス</div>
+          <div class="career-desc">現在はフリーランスとして活動。お客さまと一緒に作っていく姿勢を軸に、web・UI/UXデザイン、要件定義、設計、Figma制作を行っています。</div>
+          <details class="career-detail">
+            <summary>概要・担当範囲</summary>
+            <div class="career-detail-body">
+              <p>フリーランス活動を再開し、UI/UX、web、コーディング、印刷物など、デザインできるもの・改善したいものを区別せず担当。</p>
+              <p>株式会社ミスミさんに2024年3月から2025年9月まで参加。2025年10月より一時お休みし、2025年11月より以前の勤め先RUNTEQのお手伝いを時短稼働で開始。</p>
+              <div class="career-detail-meta">事業内容: UI/UX、web、コーディング、印刷物などのデザイン・改善 / 従業員数: 1人</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="section-label">How I Work</div>
+    <h2 class="section-title">制作<span>プロセス</span></h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-icon">🔍</div>
+        <div class="step-name">相談・整理</div>
+        <div class="step-desc">目的・課題・優先度を整理し、まず何から着手すべきかを一緒に明確にします。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-icon">✏️</div>
+        <div class="step-name">要件定義・設計</div>
+        <div class="step-desc">ユーザー導線、情報設計、画面構成を固め、制作と開発が進めやすい土台を作ります。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-icon">🎨</div>
+        <div class="step-name">Figma制作</div>
+        <div class="step-desc">FigmaでUI、LP、コンポーネントを制作し、必要に応じて運用しやすいデータへ整理します。</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-icon">🚀</div>
+        <div class="step-name">チーム連携</div>
+        <div class="step-desc">Slack、Notion、GitHubなどで認識を揃え、実装・改善までチームに馴染む形で伴走します。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-inner">
+      <div class="services-top">
+        <div>
+          <div class="section-label" style="color: rgba(255,255,255,0.4);">Services</div>
+          <h2 class="services-title">一緒に考え<br><em>形にするデザイン</em></h2>
+        </div>
+        <p class="services-desc">「何を作るか」の整理から、画面設計、Figma制作、実装を見据えた調整まで相談できます。</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-icon si-1">🎨</div>
+          <div class="service-name">Web / UI UX Design</div>
+          <div class="service-text">事業の目的とユーザーの使いやすさを整理し、伝わる画面・迷わない導線を設計します。</div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon si-2">📱</div>
+          <div class="service-name">Requirement Design</div>
+          <div class="service-text">要件が固まりきる前から参加し、優先度や改善ポイントを言語化して進行を助けます。</div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon si-3">🖥️</div>
+          <div class="service-name">Figma Production</div>
+          <div class="service-text">Figmaを主軸に、UI制作、コンポーネント整理、チームが使いやすいデータ設計に対応します。</div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon si-4">⚡</div>
+          <div class="service-name">Coding Support</div>
+          <div class="service-text">HTML、Pug、CSS、Sassの知識を活かし、実装時の迷いが少ないデザインを作ります。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual">
+        <canvas class="about-bubble-field" id="aboutBubbles3d" aria-label="触れると弾けるシャボン玉"></canvas>
+        <div class="about-photo">
+          <div class="photo-placeholder" id="aboutEmoji">🌸</div>
+        </div>
+        <div class="about-float af-1">
+          <div class="af-top">Self Works</div>
+          <div class="af-val">100+</div>
+          <div class="af-note">量をつくり、検証する</div>
+        </div>
+        <div class="about-float af-2">
+          <div class="af-top">Main Tool</div>
+          <div class="af-val">Figma</div>
+          <div class="af-note">設計から納品まで</div>
+        </div>
+        <div class="about-float af-3">
+          <div class="af-top">Design Area</div>
+          <div class="af-val">UI/UX</div>
+          <div class="af-note">LP・Web・ブランド</div>
+        </div>
+        <div class="about-float af-4">
+          <div class="af-top">Build Mind</div>
+          <div class="af-val">Coding</div>
+          <div class="af-note">実装目線で整える</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">お客さまと<br>一緒に<span>作っていく</span></h2>
+        <p>デザイナーのあべともかです。web・UI/UXを中心に、Figmaでの画面設計、LP制作、サービス改善、実装を見据えたデザインを行っています。</p>
+        <p>「どこから整えるべきか」「なぜその改善が必要か」を一緒に言語化しながら、事業側・開発側の両方が動きやすい状態を作ることを大切にしています。</p>
+        <div class="skills-list">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">FigJam</span>
+          <span class="skill-tag">XD</span>
+          <span class="skill-tag">Photoshop</span>
+          <span class="skill-tag">Illustrator</span>
+          <span class="skill-tag">Premiere</span>
+          <span class="skill-tag">After Effects</span>
+          <span class="skill-tag">Procreate</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">Pug</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">Sass</span>
+        </div>
+        <a href="mailto:abea816@gmail.com" class="btn-primary"><span class="btn-icon">💭</span>相談する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">次のプロジェクトを<br><span>一緒に作りましょう</span></h2>
+      <p>web・UI/UXデザイン、LP制作、サービス改善、Figma整理、要件定義からのご相談まで対応できます。まだ固まっていない段階でもお気軽にご相談ください。</p>
+      <div class="contact-links">
+        <a href="mailto:abea816@gmail.com" class="contact-link primary-mail">💭 Mail</a>
+        <a href="https://www.behance.net/abea816e2e8" class="contact-link" target="_blank" rel="noopener">💼 Behance</a>
+        <a href="https://abetomoka08.notion.site/abe_tomoka-190b1c4b73b14696af84e89bf6a0a6a7" class="contact-link" target="_blank" rel="noopener">🫧 Notion Portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">AT.</a>
+  <p class="footer-text">© 2026 Abe Tomoka — Web / UI UX Designer<br>Figma · Web Design · Coding Support</p>
+  <div class="footer-links">
+    <a href="#works">Works</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<div class="work-modal-backdrop" id="workModal" aria-hidden="true">
+  <div class="work-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" id="modalClose" aria-label="閉じる">×</button>
+    <div class="modal-tag" id="modalTag">✦</div>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <div class="modal-meta" id="modalMeta"></div>
+    <img class="modal-image" id="modalImage" src="" alt="">
+    <p class="modal-desc" id="modalDesc"></p>
+    <div class="modal-details" id="modalDetails"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<script src="./portfolio.js?v=20260525"></script>
+</body>
+</html>
